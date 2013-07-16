@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bob</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="underscore-1.5.1.js"></script>
+    <script src="backbone-1.0.0.js"></script>
+    <script src="backbone-localStorage.js"></script>
+    <script src="handlebars-1.0.0.js"></script>
+    <script src="bob-backbone.js"></script>
+  </head>
+
+  <body>
+    <h1>Bob</h1>
+    <form id="bobForm">
+      <fieldset>
+        <legend>Ask Bob Something</legend>
+        <input type='text' name='askBobInput' id='askBobText' autofocus="autofocus" />
+        <input type='submit' id='askBob'  value='Ask' />
+      </fieldset>
+    </form>
+
+    <div id='bobResponses'>
+      <h2>Bobs Responses</h2>
+      <ul>
+      </ul>
+    </div>
+
+    <script id="bobResponse" type="text/x-handlebars-template">
+      <li>{{response}}</li>
+    </script>
+
+    <script id="bobFlashyResponse" type="text/x-handlebars-template">
+      <li style="color: red;">{{response}}</li>
+    </script>
+
+  </body>
+</html>
