@@ -31,10 +31,12 @@ $(function() {
 
   var SayingsCollection = Backbone.Collection.extend({
     model: Saying,
-    localStorage: new Backbone.LocalStorage("sayings-backbone")
+    url: "/sayings"
+    // localStorage: new Backbone.LocalStorage("sayings-backbone")
   });
 
   Sayings = new SayingsCollection;
+  Sayings.fetch();
 
   var FavoritesView = Backbone.View.extend({
     el: $("#bobFavoriteResponses"),
