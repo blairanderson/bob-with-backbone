@@ -8,11 +8,18 @@
     <script src="backbone-1.0.0.js"></script>
     <script src="backbone-localStorage.js"></script>
     <script src="handlebars-1.0.0.js"></script>
-    <script src="bob-backbone.js"></script>
+    <script src="bob.js"></script>
   </head>
 
   <body>
+      <div id='bobFavoriteResponses'>
+      <h2>Bobs Favorite Responses</h2>
+      <ul>
+      </ul>
+    </div>
+
     <h1>Bob</h1>
+
     <form id="bobForm">
       <fieldset>
         <legend>Ask Bob Something</legend>
@@ -32,7 +39,7 @@
     </script>
 
     <script id="bobFlashyResponse" type="text/x-handlebars-template">
-      <li style="color: red;">{{response}}</li>
+      <li style="color: blue;">{{response}}</li>
     </script>
 
   </body>
